@@ -72,11 +72,14 @@
     "@adonisjs/shield": "^9.0.0",
     "@adonisjs/static": "^2.0.1",
     "@adonisjs/vite": "^6.0.1",
+    "@ai-sdk/openai": "^4.0.91",
     "@inertiajs/core": "^3.7.1",
     "@inertiajs/vue3": "^3.7.0",
     "@tuyau/core": "^1.2.2",
+    "@typesafe-ai/sdk": "^0.6.0",
     "@vinejs/vine": "^4.4.0",
     "@vue/server-renderer": "^3.5.41",
+    "ai": "^7.0.137",
     "axios": "^1.19.0",
     "edge.js": "^6.5.1",
     "luxon": "^3.7.2",
@@ -84,7 +87,8 @@
     "reflect-metadata": "^0.2.2",
     "uuid": "^14.0.2",
     "vue": "^3.5.41",
-    "vue-sonner": "^2.0.9"
+    "vue-sonner": "^2.0.9",
+    "zod": "^4.6.5"
   },
   "hotHook": {
     "boundaries": [
