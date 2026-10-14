@@ -38,4 +38,7 @@ export default await Env.create(new URL('../', import.meta.url), {
 
   // Debouncer de mensajes entrantes por WhatsApp
   WHATSAPP_WEBHOOK_DEBOUNCE_MS: Env.schema.number.optional(),
+
+  // Inactividad por conversación: ms del primer lapso (default 30 min)
+  INACTIVITY_FIRST_LAPSE_MS: Env.schema.number.optional(),
 })

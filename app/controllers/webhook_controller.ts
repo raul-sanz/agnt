@@ -2,6 +2,7 @@ import type { HttpContext } from '@adonisjs/core/http'
 import logger from '@adonisjs/core/services/logger'
 import { openwaToInbound } from '#mappers/openwa_inbound_mapper'
 import { messageDebouncer } from '#services/message_debouncer_service'
+import { inactivityTracker } from '#services/inactivity_tracker_service'
 import { openwaWebhookValidator } from '#validators/webhook'
 
 export default class WebhookController {
@@ -25,6 +26,7 @@ export default class WebhookController {
 
     const inbound = openwaToInbound(payload)
     await messageDebouncer.push(inbound)
+    await inactivityTracker.recordActivity(inbound.senderPhone)
 
     logger.debug(
       {
